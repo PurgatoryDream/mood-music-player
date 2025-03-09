@@ -1,47 +1,41 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import PlayButton from "./components/PlayButton.vue";
+import PlaylistList from "./components/PlaylistList.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <main class="main">
+    <div class="ButtonLayer">
+      <PlayButton class="PlayButton" />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
+    <div class="PlaylistLayer">
+      <PlaylistList />
+    </div>
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
+<style>
+  /* Global style. */
+  .main {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .ButtonLayer {
+    width: 100%;
+    height: 10%;
   }
 
-  header .wrapper {
+  .PlayButton {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-}
+
+  .PlaylistLayer {
+    width: 100%;
+    height: 90%;
+  }
 </style>
