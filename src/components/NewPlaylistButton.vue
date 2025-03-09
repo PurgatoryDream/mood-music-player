@@ -40,7 +40,4 @@ function submitPlaylist() {
   background-color: #a0a0a0;
   cursor: pointer;
 }
-
-.playlist-name {
-}
 </style>

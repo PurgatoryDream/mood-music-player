@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import {ref, reactive } from 'vue';
+import { ref } from 'vue';
+import type { Ref } from 'vue'; 
 import PlaylistListElem from './PlaylistListElem.vue';
 import NewPlaylistButton from './NewPlaylistButton.vue';
   
-const playlists = ref([ {"id": 1, "name": "Lady Gaga"} ]);
+interface Playlist {
+  id: number;
+  name: string;
+};
+const playlists: Ref<Playlist[]> = ref([]);
 
-function createNewPlaylist(newPlaylist) {
+function createNewPlaylist(newPlaylist: Playlist) {
   playlists.value.push(newPlaylist)
 }
 </script>

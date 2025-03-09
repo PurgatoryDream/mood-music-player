@@ -31,7 +31,4 @@
   border-radius: 25%;
   box-shadow: 2px 2px 4px black;
 }
-
-.playlist-name {
-}
 </style>
