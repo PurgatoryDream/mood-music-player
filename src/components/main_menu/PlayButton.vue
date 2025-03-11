@@ -18,6 +18,7 @@
 button {
   height: 100%;
   width: 20%;
+  min-width: 300px;
   background-color: #2add51;
   border: none;
   border-radius: 0 0 50% 50%;
